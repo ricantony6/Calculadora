@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap");
+
 :root {
     --cor-background: #ecf0f3;
     --cor-branco: #ffffff;
@@ -17,23 +19,23 @@
 }
 
 * {
-font-family: "inter" sans-serif;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-letter-spacing: 0px;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-scroll-behavior: smooth;
-margin: 0;
-/*background: var(--cor-background);*/
-outline: none;
+    font-family: "Inter", sans-serif;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    margin: 0;
+    background: var(--cor-background);
+    outline: none;
 }
 
 .conteudo {
     height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;   
 }
 
 .conteudo .calculadora {
@@ -51,6 +53,7 @@ outline: none;
     background-color: transparent;
     column-gap: 7px;
 }
+
 .conteudo .calculadora .opcoes__janela div {
     width: 12px;
     height: 12px;
@@ -60,13 +63,13 @@ outline: none;
 }
 
 .conteudo .calculadora .opcoes__janela div::after {
-  content: "";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 11px;
-  font-size: 10px;
-  cursor: pointer;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 11px;
+    font-size: 10px;
+    cursor: pointer;
 }
 
 .conteudo .calculadora .opcoes__janela div:nth-child(1) {
@@ -100,11 +103,7 @@ outline: none;
     background-color: var(--cor-input-resultado);
     border-radius: 10px;
 }
-.conteudo .calculadora .conteudo__botoes {
-    display: grid;
-    background-color: var(--cor-input-resultado);
-    border-radius: 10px;
-}
+
 .conteudo .calculadora .conteudo__botoes input {
     grid-column: span 4;
     height: 70px;
@@ -119,6 +118,7 @@ outline: none;
     margin-top: 20px;
     font-weight: 200;
 }
+
 .conteudo .calculadora .conteudo__botoes input::placeholder {
     color: var(--cor-branco);
     opacity: 1;
@@ -140,6 +140,7 @@ outline: none;
     border-top: 1px solid var(--cor-borda-botoes);
     user-select: none;
 }
+
 .conteudo .calculadora .conteudo__botoes a:hover {
     background-color: var(--cor-botao-normal-hover);
 }
@@ -148,6 +149,7 @@ outline: none;
     grid-column: span 2;
     width: 100%;
 }
+
 .conteudo .calculadora .conteudo__botoes a.botoes__iniciais {
     background-color: var(--cor-botao-topo-cinza-escuro);
 }
@@ -166,6 +168,7 @@ outline: none;
 .conteudo .calculadora .conteudo__botoes a:last-child:hover {
     background-color: var(--cor-botao-laranja-hover);
 }
+
 .borda-radius-esquerda {
     border-bottom-left-radius: 10px;
 }

@@ -1,22 +1,22 @@
 let elementoResultado = document.querySelector(".js-resultado");
-let botoesPadroes = document.querySelector(".js-btn-padroes");
-let botaoresultado = document.querySelector(".js-btn-igual");
+let botoesPadroes = document.querySelectorAll(".js-btn-padroes");
+let botaoResultado = document.querySelector(".js-btn-igual");
 let botaoAC = document.querySelector(".js-btn-ac");
 let botaoMaisMenos = document.querySelector(".js-btn-mais-menos");
-let botaoDeletar = document.querySelector(".js-btn-Del");
+let botaoDeletar = document.querySelector(".js-btn-del");
 
 function adicionarElementoAoInputResultado(numeroDigitado) {
-    verificarSimboloDuplicado(numeroDigitado)
-    if (verificarSimboloInicial(numeroDigitado)) return;
-    elementoResultado.value += numeroDigitado;
+  verificarSimboloDuplicado(numeroDigitado);
+  if (verificarSimboloInicial(numeroDigitado)) return;
+  elementoResultado.value += numeroDigitado;
 }
 
 function executarCalculo() {
-    try {
-        elementoResultado.value = eval(elementoResultado.value);
-    } catch {
-        alert("algo deu errado. Tente novamente");
-    }
+  try {
+    elementoResultado.value = eval(elementoResultado.value);
+  } catch {
+    alert("Algo deu errado. Tente novamente.");
+  }
 }
 
 function limparResultado() {
@@ -55,6 +55,7 @@ function verificarSimboloInicial(numeroDigitadoRecebidoPorParametro) {
     return true;
   }
 }
+
 function gerenciarEscutadores() {
   botoesPadroes.forEach((elementoCorrente) => {
     elementoCorrente.addEventListener("click", () => {
@@ -63,7 +64,7 @@ function gerenciarEscutadores() {
     });
   });
 
-botaoResultado.addEventListener("click", () => {
+  botaoResultado.addEventListener("click", () => {
     executarCalculo();
   });
 
@@ -75,16 +76,9 @@ botaoResultado.addEventListener("click", () => {
     trocarSinalDaConta();
   });
 
-    botaoDeletar.addEventListener("click", () => {
+  botaoDeletar.addEventListener("click", () => {
     deletarUltimaLetraDoResultado();
   });
 }
 
 gerenciarEscutadores();
-
-
-
-
-
-
-
