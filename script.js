@@ -29,6 +29,40 @@ function trocarSinalDaConta() {
   }
 }
 
+function deletarUltimaLetraDoResultado() {
+  elementoResultado.value = elementoResultado.value.slice(0, -1);
+}
+
+function verificarSimboloDuplicado(numeroDigitadoRecebidoPorParametro) {
+  let ultimoValorNoInputResultado =
+    elementoResultado.value[elementoResultado.value.length - 1];
+  if (
+    ultimoValorNoInputResultado &&
+    !Number(ultimoValorNoInputResultado) &&
+    !Number(numeroDigitadoRecebidoPorParametro) &&
+    ultimoValorNoInputResultado != 0 &&
+    numeroDigitadoRecebidoPorParametro != 0
+  ) {
+    deletarUltimaLetraDoResultado();
+  }
+}
+
+function verificarSimboloInicial(numeroDigitadoRecebidoPorParametro) {
+  if (
+    elementoResultado.value.length == 0 &&
+    !Number(numeroDigitadoRecebidoPorParametro)
+  ) {
+    return true;
+  }
+}
+function gerenciarEscutadores() {
+  botoesPadroes.forEach((elementoCorrente) => {
+    elementoCorrente.addEventListener("click", () => {
+      let valorDoElementoClicado = elementoCorrente.dataset.valor;
+      adicionarElementoAoInputResultado(valorDoElementoClicado);
+    });
+  });
+}
 
 
 
