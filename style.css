@@ -37,6 +37,57 @@ outline: none;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;   
+}
+
+.conteudo .calculadora {
+    border: 1px solid var(--cor-borda-calculadora);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px var(--cor-sombra-padrao);
+}
+
+.conteudo .calculadora .opcoes__janela {
+    display: flex;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-color: transparent;
+    column-gap: 7px;
+}
+.conteudo .calculadora .opcoes__janela div {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+}
+
+.conteudo .calculadora .opcoes__janela div::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 11px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.conteudo .calculadora .conteudo__botoes {
+    display: grid;
+    background-color: var(--cor-input-resultado);
+    border-radius: 10px;
+}
+.conteudo .calculadora .conteudo__botoes input {
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: var(--cor-input-resultado);
+    border: none;
+    border-radius: 10px;
+    color: var(--cor-branco);
+    font-size: 50px;
+    text-align: right;
+    margin: auto;
+    margin-top: 20px;
+    font-weight: 200;
 }
