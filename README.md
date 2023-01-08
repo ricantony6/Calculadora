@@ -8,8 +8,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML
-- CSS
-  -JavaScript
+- CSS e JavaScript
 - Git e Github
 
 ## 💻 Projeto
