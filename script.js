@@ -62,7 +62,28 @@ function gerenciarEscutadores() {
       adicionarElementoAoInputResultado(valorDoElementoClicado);
     });
   });
+
+botaoResultado.addEventListener("click", () => {
+    executarCalculo();
+  });
+
+  botaoAC.addEventListener("click", () => {
+    limparResultado();
+  });
+
+  botaoMaisMenos.addEventListener("click", () => {
+    trocarSinalDaConta();
+  });
+
+    botaoDeletar.addEventListener("click", () => {
+    deletarUltimaLetraDoResultado();
+  });
 }
+
+gerenciarEscutadores();
+
+
+
 
 
 
